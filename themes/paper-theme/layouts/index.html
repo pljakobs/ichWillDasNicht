@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <main class="container">
+        <h1>{{ .Site.Title }}</h1>
+        <ul class="posts-list">
+            {{ range .Site.RegularPages }}
+                <li class="post-item">
+                    <a href="{{ .RelPermalink }}">
+                        <article class="paper">
+                            <h2>{{ .Title }}</h2>
+                            <p>{{ .Summary }}</p>
+                        </article>
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </main>
+{{ end }}
